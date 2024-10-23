@@ -2,7 +2,40 @@
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
 	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
 	"files": { "ignoreUnknown": false, "ignore": [] },
-	"formatter": { "enabled": true, "indentStyle": "tab" },
+	"formatter": {
+		"enabled": true,
+		"useEditorconfig": true,
+		"formatWithErrors": false,
+		"indentStyle": "space",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"lineWidth": 190,
+		"attributePosition": "auto",
+		"bracketSpacing": true,
+		"ignore": [
+			".github/actions/javascript/**/index.js",
+			"**/.well-known",
+			"desktop/dist/**/*.js",
+			"dist/**/*.js",
+			"assets/animations",
+			"**/android",
+			"**/ios",
+			"**/vendor",
+			"**/package.json",
+			"**/package-lock.json",
+			"**/*.html",
+			"**/*.yml",
+			"**/*.yaml",
+			"**/*.css",
+			"**/*.scss",
+			"**/*.md",
+			"**/*.markdown",
+			"src/libs/E2E/reactNativeLaunchingTest.ts",
+			"lib/**",
+			"src/libs/SearchParser/searchParser.js",
+			"src/libs/SearchParser/autocompleteParser.js"
+		]
+	},
 	"organizeImports": { "enabled": true },
 	"linter": {
 		"enabled": true,
@@ -264,7 +297,17 @@
 		]
 	},
 	"javascript": {
-		"formatter": { "quoteStyle": "double" },
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"trailingCommas": "all",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"quoteStyle": "single",
+			"attributePosition": "auto",
+			"bracketSpacing": false
+		},
 		"globals": ["__DEV__"]
 	},
 	"overrides": [
