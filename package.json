@@ -65,7 +65,7 @@
     "generate-autocomplete-parser": "peggy --format es -o src/libs/SearchParser/autocompleteParser.js src/libs/SearchParser/autocompleteParser.peggy src/libs/SearchParser/baseRules.peggy",
     "web:prod": "http-server ./dist --cors",
     "biome:lint": "biome lint ./src",
-    "oxlint": "oxlint"
+    "oxlint": "oxlint -c .oxlintrc.json"
   },
   "dependencies": {
     "@dotlottie/react-player": "^1.6.3",
@@ -283,6 +283,7 @@
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-jsdoc": "^46.2.6",
     "eslint-plugin-lodash": "^7.4.0",
+    "eslint-plugin-oxlint": "^0.10.1",
     "eslint-plugin-react-compiler": "0.0.0-experimental-9ed098e-20240725",
     "eslint-plugin-react-native-a11y": "^3.3.0",
     "eslint-plugin-storybook": "^0.8.0",
