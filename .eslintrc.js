@@ -126,11 +126,11 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
-        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'], // revisit
+        '@typescript-eslint/no-floating-promises': 'off', // Not found in OXC
         '@typescript-eslint/no-import-type-side-effects': 'error',
         '@typescript-eslint/array-type': ['error', {default: 'array-simple'}],
-        '@typescript-eslint/naming-convention': [
+        '@typescript-eslint/naming-convention': [ // Not found in OXC plus revisit
             'error',
             {
                 selector: ['variable', 'property'],
@@ -166,7 +166,7 @@ module.exports = {
                 fixStyle: 'separate-type-imports',
             },
         ],
-        '@typescript-eslint/consistent-type-exports': [
+        '@typescript-eslint/consistent-type-exports': [ // Not found in OXC + revisit
             'error',
             {
                 fixMixedExportsWithInlineTypeSpecifier: false,
@@ -175,27 +175,27 @@ module.exports = {
         '@typescript-eslint/no-use-before-define': ['error', {functions: false}],
 
         // ESLint core rules
-        'es/no-nullish-coalescing-operators': 'off',
+        'es/no-nullish-coalescing-operators': 'off', // Not found in OXC + revisit
         'es/no-optional-chaining': 'off',
-        'deprecation/deprecation': 'off',
+        'deprecation/deprecation': 'off', // Not found in OXC + revisit
 
         // Import specific rules
-        'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-        'import/no-extraneous-dependencies': 'off',
+        'import/consistent-type-specifier-style': ['error', 'prefer-top-level'], // Not found in OXC + revisit
+        'import/no-extraneous-dependencies': 'off', // Not found in OXC + revisit
 
         // Rulesdir specific rules
-        'rulesdir/no-default-props': 'error',
-        'rulesdir/prefer-type-fest': 'error',
-        'rulesdir/no-multiple-onyx-in-file': 'off',
-        'rulesdir/prefer-underscore-method': 'off',
-        'rulesdir/prefer-import-module-contents': 'off',
+        'rulesdir/no-default-props': 'error', // Not found in OXC + revisit
+        'rulesdir/prefer-type-fest': 'error', // Not found in OXC + revisit
+        'rulesdir/no-multiple-onyx-in-file': 'off', // Not found in OXC + revisit
+        'rulesdir/prefer-underscore-method': 'off', // Not found in OXC + revisit
+        'rulesdir/prefer-import-module-contents': 'off', // Not found in OXC + revisit
 
         // React and React Native specific rules
-        'react-native-a11y/has-accessibility-hint': ['off'],
-        'react/require-default-props': 'off',
-        'react/prop-types': 'off',
-        'react/jsx-no-constructed-context-values': 'error',
-        'react-native-a11y/has-valid-accessibility-descriptors': [
+        'react-native-a11y/has-accessibility-hint': ['off'], // Not found in OXC + revisit
+        'react/require-default-props': 'off', // Not found in OXC + revisit
+        'react/prop-types': 'off', // Not found in OXC + revisit
+        'react/jsx-no-constructed-context-values': 'error', // Not found in OXC + revisit
+        'react-native-a11y/has-valid-accessibility-descriptors': [ // Not found in OXC + revisit
             'error',
             {
                 touchables: ['PressableWithoutFeedback', 'PressableWithFeedback'],
@@ -204,14 +204,14 @@ module.exports = {
         'react-compiler/react-compiler': 'error',
 
         // Disallow usage of certain functions and imports
-        'no-restricted-syntax': [
+        'no-restricted-syntax': [ // Not found in OXC + revisit
             'error',
             {
                 selector: 'TSEnumDeclaration',
                 message: "Please don't declare enums, use union types instead.",
             },
         ],
-        'no-restricted-properties': [
+        'no-restricted-properties': [ // Not found in OXC + revisit
             'error',
             {
                 object: 'Image',
@@ -219,7 +219,7 @@ module.exports = {
                 message: 'Usage of Image.getImage is restricted. Please use the `react-native-image-size`.',
             },
         ],
-        'no-restricted-imports': [
+        'no-restricted-imports': [ // Not found in OXC + revisit
             'error',
             {
                 paths: restrictedImportPaths,
@@ -228,15 +228,15 @@ module.exports = {
         ],
 
         // Other rules
-        curly: 'error',
-        'you-dont-need-lodash-underscore/throttle': 'off',
+        curly: 'error', // Not found in OXC + revisit
+        'you-dont-need-lodash-underscore/throttle': 'off', // Not found in OXC + revisit
         // The suggested alternative (structuredClone) is not supported in Hermes:https://github.com/facebook/hermes/issues/684
-        'you-dont-need-lodash-underscore/clone-deep': 'off',
-        'lodash/import-scope': ['error', 'method'],
-        'prefer-regex-literals': 'off',
-        'valid-jsdoc': 'off',
-        'jsdoc/no-types': 'error',
-        '@dword-design/import-alias/prefer-alias': [
+        'you-dont-need-lodash-underscore/clone-deep': 'off', // Not found in OXC + revisit
+        'lodash/import-scope': ['error', 'method'], // Not found in OXC + revisit
+        'prefer-regex-literals': 'off', // Not found in OXC + revisit
+        'valid-jsdoc': 'off', // Not found in OXC + revisit
+        'jsdoc/no-types': 'error', // Not found in OXC + revisit
+        '@dword-design/import-alias/prefer-alias': [ // Not found in OXC + revisit
             'warn',
             {
                 alias: {
